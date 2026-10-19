@@ -1,0 +1,102 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+# Main editable resume source. Render with the command in README.md.
+cv:
+  name: Ananya Singh
+  location: San Francisco, CA
+  email: ashkananyasingh27@gmail.com
+  social_networks:
+    - network: LinkedIn
+      username: ash-ananya
+  sections:
+    experience:
+      - company: Finix
+        position: Data Engineer
+        location: San Francisco, CA
+        start_date: 2025-11
+        end_date: present
+        highlights:
+          - Co-led a six-week migration of approximately 400 Redshift tables and reporting workflows to S3, Apache Iceberg, and Athena; built parity checks and phased the Superset cutover with **zero customer downtime**.
+          - Optimized Iceberg partitioning, table rewrites, and compaction, reducing data-platform spend approximately **40%** and critical pipeline runtime from 40 to **15-20** minutes; no dashboard pipeline failures observed after compaction.
+          - Built an Airflow customer-health data product covering approximately **2,000 applications** and **100 metrics** per customer segment; replaced inconsistent Finance queries with reconciled models used in monthly CEO and leadership reviews.
+          - Lead data engineering for a **Cube governance POC**, designing 5 fact, 4 dimension, and 5 aggregate models with YAML definitions and governed views. Partner with DevOps on AWS/EKS and Bedrock integration, assessing access boundaries and caching risks for PCI and PII data.
+          - Redesigned U.S./Canada bank and card-network reconciliation with Athena, Iceberg, Airflow, and Slack alerts; cut runtime from 2-3 hours to **30-40 minutes** and surfaced **five major incidents** involving missing wires or files.
+          - Built GitHub Actions workflows governing **all data-repository deployments**, replacing manual S3 uploads with approval checks, tracked test releases, conflict detection, and expiry cleanup; no deployment version-drift incidents reported after adoption.
+      - company: JPMorgan Chase
+        position: Data Engineer, QR Associate
+        location: Plano, TX
+        start_date: 2024-02
+        end_date: 2025-11
+        highlights:
+          - Led an event-driven risk-data migration consolidating **22 data panels into 9**, reducing processing time **40%** and data-quality issues **80%** for enterprise credit-risk forecasting.
+          - Built Python, Spark, and SQL validation tooling for quarterly model-attribute changes, eliminating **30+ hours** of manual work per cycle and accelerating data delivery **50%**.
+          - Engineered Great Expectations and DuckDB controls for C&I portfolio refreshes supporting CCAR, CECL, and Basel reporting, reducing downstream anomalies and schema issues **70%**.
+          - Enhanced distributed ETL and KPI models to close **$23B in credit-exposure gaps** and improve completeness, lineage, and monitoring across regulated risk datasets.
+      - company: CME Group
+        position: Quantitative Analyst Intern
+        location: Chicago, IL
+        start_date: 2023-05
+        end_date: 2023-08
+        highlights:
+          - Analyzed high-frequency market data with Python and SQL; engineered order-flow and mean-reversion features and evaluated predictive models for mid-price movement and execution efficiency.
+    Technical Skills:
+      - label: Languages & Processing
+        details: Python, SQL, PySpark, Apache Spark, Pandas, NumPy
+      - label: Data Platform
+        details: Airflow, Iceberg, Athena, S3, Kafka / Amazon MSK, Debezium, Firehose, Glue Data Catalog, EMR Serverless, EKS, RDS PostgreSQL, Parquet
+      - label: Modeling & Engineering
+        details: Cube, dimensional modeling, semantic layers, GitHub Actions, Terraform, Datadog, Superset, Great Expectations, DuckDB, CI/CD, CDC
+    education:
+      - institution: University of Illinois Urbana-Champaign
+        area: Financial Engineering (Operations Research)
+        degree: M.S.
+        end_date: 2024-05
+        summary: 'GPA: 3.97/4.00'
+      - institution: BITS Pilani
+        area: Chemical Engineering; Minor in Finance
+        degree: B.E.
+        end_date: 2021-05
+        summary: 'GPA: 9/10'
+design:
+  theme: engineeringresumes
+  page:
+    size: us-letter
+    top_margin: 0.55in
+    bottom_margin: 0.55in
+    left_margin: 0.6in
+    right_margin: 0.6in
+    show_footer: false
+    show_top_note: false
+  typography:
+    font_size:
+      body: 10pt
+      name: 25pt
+      connections: 9.5pt
+      section_titles: 12pt
+    line_spacing: 0.5em
+    alignment: left
+  header:
+    space_below_name: 0.4cm
+    space_below_connections: 0.4cm
+  section_titles:
+    space_above: 0.4cm
+    space_below: 0.2cm
+  sections:
+    space_between_regular_entries: 0.3cm
+    space_between_text_based_entries: 0.1cm
+  entries:
+    date_and_location_width: 3.5cm
+    highlights:
+      space_above: 0.1cm
+      space_between_items: 0.09cm
+  templates:
+    date_range: 'START_DATE - END_DATE'
+    experience_entry:
+      main_column: "**POSITION**, COMPANY - LOCATION\nSUMMARY\nHIGHLIGHTS"
+      date_and_location_column: DATE
+    education_entry:
+      main_column: "**INSTITUTION**\nDEGREE_WITH_AREA | SUMMARY"
+      date_and_location_column: DATE
+      degree_column: null
+locale:
+  language: english
+  present: Present
